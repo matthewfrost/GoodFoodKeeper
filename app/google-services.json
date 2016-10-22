@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "1051438035625",
+    "firebase_url": "https://good-food-keeper.firebaseio.com",
+    "project_id": "good-food-keeper",
+    "storage_bucket": "good-food-keeper.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1051438035625:android:85970c30d3e98373",
+        "android_client_info": {
+          "package_name": "co.matthewfrost.goodfoodkeeper"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1051438035625-1d3rq5iqq2t78mmtoguac2m2l6dobidg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDU1Auwf8KBSCdy5_uvBjXhe740XPW8c5E"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
