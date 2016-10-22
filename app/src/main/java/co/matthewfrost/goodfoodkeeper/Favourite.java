@@ -1,6 +1,8 @@
 package co.matthewfrost.goodfoodkeeper;
 
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -38,6 +40,39 @@ public class Favourite extends AppCompatActivity {
                 Intent i = new Intent(getApplicationContext(), Details.class);
                 i.putExtra("filePath", fPath);
                 startActivity(i);
+            }
+        });
+
+
+
+
+        fileView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(AdapterView<?> parent, View view, final int position, long id) {
+                 AlertDialog.Builder builder = new AlertDialog.Builder(Favourite.this);
+                builder.setMessage("Delete Recipe")
+                        .setTitle("Delete Recipe?")
+                        .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                absFiles.get(position).delete();
+                                files.remove(position);
+                                fileAdapter.notifyDataSetChanged();
+
+                            }
+                        })
+                        .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+
+                            }
+                        });
+                AlertDialog dialog = builder.create();
+
+                dialog.show();
+
+
+                return true;
             }
         });
 
